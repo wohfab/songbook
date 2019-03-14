@@ -1,0 +1,93 @@
+\documentclass[fontsize=9pt,twoside]{scrartcl}
+\usepackage[a6paper,lmargin=7mm, rmargin=7mm, tmargin=10mm, bmargin=5mm, footskip=10mm]{geometry}
+%\usepackage[a6paper,lmargin=0mm, rmargin=0mm, tmargin=0mm, bmargin=0mm, footskip=0mm]{geometry}
+\usepackage[ngerman]{babel}
+
+\usepackage{fontspec} 
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+\setmainfont{EB Garamond}
+
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+
+\usepackage[chorded]{songs}
+\newindex{titleidx}{cbtitle}
+\versesep=9pt plus 2pt minus 2pt
+
+\setlength{\sbarheight}{0pt}
+\setlength{\cbarwidth}{12pt}
+
+\songcolumns{1}
+
+\renewcommand{\stitlefont}{
+  \normalfont\scshape\Large\baselineskip=16pt\lineskiplimit=0pt
+}
+\renewcommand{\printchord}[1]{\ttfamily#1}
+
+\renewcommand{\clineparams}{
+  \baselineskip=9pt
+  \lineskiplimit=1pt
+  \lineskip=1pt
+}
+ 
+\renewcommand{\printversenum}[1]{\texttt{\large#1.}\ }
+
+\baselineadj=1pt plus 1pt minus 0pt
+
+\renewcommand{\songmark}{\markboth{\thesongnum}{\thesongnum}}
+
+%\definecolor{brunogreen}{RGB}{0,129,46}
+%\renewcommand{\snumbgcolor}{brunogreen}
+
+\begin{document}
+
+%%%%
+%%%% http://www.stamm-loewenherz.de/liederbuch/
+%%%%
+
+%\songsection{GER}
+\begin{songs}{titleidx}
+
+\include{misc/frontcover}
+
+%\showindex[2]{Inhaltsverzeichnis}{titleidx}
+
+\include{songs/alle-die-mit-uns-auf-kaperfahrt-fahren}
+\include{songs/andre-die-das-land-so-sehr-nicht-liebten}
+\include{songs/bella-ciao}
+\include{songs/bolle-reiste-juengst-zu-pfingsten}
+\include{songs/burschen-burschen}
+\iffalse
+\include{songs/der-kleine-troll}
+\include{songs/der-piet-am-galgen}
+\include{songs/die-freie-republik}
+\include{songs/die-lappen-hoch}
+\include{songs/drei-glaenzende-kugeln}
+\include{songs/edelweisspiraten}
+\include{songs/es-ist-an-der-zeit}
+\include{songs/es-war-an-einem-sommertag}
+\include{songs/es-waren-zwei-koenigskinder}
+\include{songs/gehe-nicht-oh-gregor}
+\include{songs/greensleaves}
+\include{songs/heute-hier-morgen-dort}
+\include{songs/marzipan}
+\include{songs/near-to-banbridge-town}
+\include{songs/nehmt-abschied-bruder}
+\include{songs/nordwaerts-nordwaerts}
+\include{songs/raubritter}
+\include{songs/roter-mond}
+\include{songs/roter-wein-im-becher}
+\include{songs/scarborough-fair}
+\include{songs/schilf-bleicht}
+\include{songs/strassen-auf-und-strassen-ab}
+\include{songs/the-foggy-dew}
+\include{songs/whiskey-in-the-jar}
+\include{songs/wild-rover}
+\include{songs/zirkuslied}
+\fi
+
+
+\end{songs}
+
+\end{document}
